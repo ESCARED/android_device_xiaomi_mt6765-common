@@ -29,6 +29,11 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_GE8320
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# USE_CUSTOM_AUDIO_POLICY := 1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=cactusRIL
+
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
